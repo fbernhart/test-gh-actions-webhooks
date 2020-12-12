@@ -1,0 +1,24 @@
+name: Remove labels after pull request merge
+on:
+  pull_request:
+    types:
+      - closed
+jobs:
+  remove-label:
+    if: github.event.pull_request.merged == 'true'
+    runs-on: ubuntu-latest
+    name: Remove labels
+    steps:
+      - name: removelabel
+        uses: mondeja/remove-labels-gh-action@v0.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 
+            - awaiting reply
+            - changes requested
+            - duplicate
+            - in discussion
+            - invalid
+            - out of scope
+            - pending
+            - won't add
