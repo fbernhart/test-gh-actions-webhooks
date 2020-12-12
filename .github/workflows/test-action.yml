@@ -33,11 +33,7 @@ jobs:
       - uses: mondeja/remove-labels-gh-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          labels: |
-            awaiting reply
-            changes requested
-            in discussion
-            out of scope
+          labels: in discussion
 
   remove-closed-issue-labels:
     name: Remove closed issue labels
