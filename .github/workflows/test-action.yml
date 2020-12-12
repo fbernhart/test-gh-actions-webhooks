@@ -13,12 +13,12 @@ jobs:
         uses: mondeja/remove-labels-gh-action@v0.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          labels: 
-            - awaiting reply
-            - changes requested
-            - duplicate
-            - in discussion
-            - invalid
-            - out of scope
-            - pending
-            - won't add
+          labels: |
+            awaiting reply
+            changes requested
+            duplicate
+            in discussion
+            invalid
+            out of scope
+            pending
+            won't add
