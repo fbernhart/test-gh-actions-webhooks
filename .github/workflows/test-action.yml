@@ -3,6 +3,10 @@ on:
   pull_request:
     types:
       - closed
+  issues:
+  push:
+    types:
+      - closed
 jobs:
   remove-label:
     if: github.event.pull_request.merged
